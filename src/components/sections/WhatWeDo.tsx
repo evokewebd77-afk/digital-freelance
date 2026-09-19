@@ -38,7 +38,7 @@ export default function WhatWeDo() {
           duration: 0.7,
           ease: "power3.out",
           scrollTrigger: {
-            trigger: card,
+            trigger: card as HTMLElement,
             start: "top 92%",
           },
         });
