@@ -32,7 +32,7 @@ export default function WhatWeDo() {
       });
       // Cards reveal animation
       gsap.utils.toArray("[data-wwd='card']").forEach((card, i) => {
-        gsap.from(card, {
+        gsap.from(card as HTMLElement, {
           y: 80,
           opacity: 0,
           duration: 0.7,
