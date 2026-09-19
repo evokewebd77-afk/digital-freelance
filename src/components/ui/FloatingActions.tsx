@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useEffect } from "react";
 import { Mail, ArrowUp } from "lucide-react";
@@ -30,7 +30,7 @@ export default function FloatingActions() {
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-center gap-3 select-none">
       {/* 1. WhatsApp Button */}
       <a
-        href="https://wa.me/?text=Hello%20Digital%20Freelance%20Studio"
+        href="https://wa.me/918837509696?text=Hello%20Digital%20Freelance%20Studio"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
