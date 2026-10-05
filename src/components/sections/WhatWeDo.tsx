@@ -5,15 +5,91 @@ import Image from "next/image";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
 import SectionHeading from "../ui/SectionHeading";
-import { servicesData, capabilities } from "@/lib/data";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const homeServices = [
+  {
+    id: "1",
+    title: "Web Development",
+    description:
+      "Modern, responsive and SEO-friendly websites designed to represent your brand and convert visitors into customers.",
+    tags: ["Responsive Websites", "SEO-Friendly", "Conversion Focused"],
+    image:
+      "https://cdn.prod.website-files.com/69e362f3ced6e65f05bdec7d/6a54cbe744e8daf778bfadd5_Service_08.avif",
+  },
+  {
+    id: "2",
+    title: "SEO",
+    description:
+      "Improve your search visibility, rankings and organic traffic with technical SEO, on-page optimization, content strategy and link building.",
+    tags: ["Technical SEO", "On-Page SEO", "Link Building"],
+    image:
+      "https://cdn.prod.website-files.com/69e362f3ced6e65f05bdec7d/6a54cbd0b2d9486b37488a64_Service_07.avif",
+  },
+  {
+    id: "3",
+    title: "Google Ads & PPC",
+    description:
+      "Target the right audience with data-driven Google Ads campaigns focused on qualified traffic, leads and measurable conversions.",
+    tags: ["Google Ads", "PPC Campaigns", "Measurable Results"],
+    image:
+      "https://cdn.prod.website-files.com/69e362f3ced6e65f05bdec7d/6a5484ba4c8fb6e8690b1872_Service_06.avif",
+  },
+  {
+    id: "4",
+    title: "Social Media Marketing",
+    description:
+      "Build your brand presence with strategic content, creative campaigns, audience engagement and performance-focused social media management.",
+    tags: ["Content Strategy", "Creative Campaigns", "Audience Growth"],
+    image:
+      "https://cdn.prod.website-files.com/69e362f3ced6e65f05bdec7d/6a54cbe744e8daf778bfadd5_Service_08.avif",
+  },
+  {
+    id: "5",
+    title: "Content Writing",
+    description:
+      "Create SEO-friendly website content, blogs, landing pages and marketing copy that communicates your value and supports organic growth.",
+    tags: ["Website Copy", "Blog Writing", "Landing Pages"],
+    image:
+      "https://cdn.prod.website-files.com/69e362f3ced6e65f05bdec7d/6a54cbd0b2d9486b37488a64_Service_07.avif",
+  },
+  {
+    id: "6",
+    title: "Graphic Designing",
+    description:
+      "Professional social media creatives, advertising graphics, website visuals and branded marketing materials designed for your business.",
+    tags: ["Social Creatives", "Ad Graphics", "Brand Visuals"],
+    image:
+      "https://cdn.prod.website-files.com/69e362f3ced6e65f05bdec7d/6a5484ba4c8fb6e8690b1872_Service_06.avif",
+  },
+  {
+    id: "7",
+    title: "Lead Generation",
+    description:
+      "Generate qualified enquiries through landing pages, paid campaigns, lead forms, conversion optimization and targeted digital strategies.",
+    tags: ["Landing Pages", "Lead Forms", "Conversion Optimization"],
+    image:
+      "https://cdn.prod.website-files.com/69e362f3ced6e65f05bdec7d/6a54cbe744e8daf778bfadd5_Service_08.avif",
+  },
+  {
+    id: "8",
+    title: "Digital Marketing Audit",
+    description:
+      "Get a complete review of your website, SEO, social media, paid advertising and online presence with actionable recommendations.",
+    tags: ["Website Review", "SEO Review", "Action Plan"],
+    image:
+      "https://cdn.prod.website-files.com/69e362f3ced6e65f05bdec7d/6a54cbd0b2d9486b37488a64_Service_07.avif",
+  },
+];
+
+const capabilities = homeServices.map((service) => service.title);
+
 export default function WhatWeDo() {
   const sectionRef = useRef<HTMLElement>(null);
-  const featuredServices = servicesData.slice(0, 3);
+  const featuredServices = homeServices;
 
   useEffect(() => {
     if (!sectionRef.current) return;
@@ -31,7 +107,7 @@ export default function WhatWeDo() {
         },
       });
       // Cards reveal animation
-      gsap.utils.toArray("[data-wwd='card']").forEach((card, i) => {
+      gsap.utils.toArray("[data-wwd='card']").forEach((card) => {
         gsap.from(card as HTMLElement, {
           y: 80,
           opacity: 0,
@@ -60,8 +136,8 @@ export default function WhatWeDo() {
           className="mb-12 md:mb-16 text-center flex flex-col items-center"
         >
           <SectionHeading
-            title="What We Do"
-            subtitle="Capabilities"
+            title="Services"
+            subtitle="Digital Growth Solutions"
             theme="center-black"
           />
         </div>
@@ -88,7 +164,9 @@ export default function WhatWeDo() {
                     <span className="text-2xl sm:text-3xl text-[#f97316] font-bold">
                       /
                     </span>
-                    <span className="text-xl sm:text-2xl text-black/40">3</span>
+                    <span className="text-xl sm:text-2xl text-black/40">
+                      {featuredServices.length}
+                    </span>
                   </div>
 
                   <div>
@@ -113,8 +191,8 @@ export default function WhatWeDo() {
                   </div>
 
                   <div className="pt-2">
-                    <Button href={`/services#${service.slug}`} variant="black">
-                      View details
+                    <Button href="/contact-us" variant="black">
+                      Enquire About This Service
                     </Button>
                   </div>
                 </div>
@@ -180,7 +258,7 @@ export default function WhatWeDo() {
       <Container>
         <div className="text-center">
           <Button href="/services" variant="secondary">
-            Explore Services
+            Explore All Services
           </Button>
         </div>
       </Container>

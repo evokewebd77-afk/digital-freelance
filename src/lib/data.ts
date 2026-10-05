@@ -50,17 +50,7 @@ export interface BlogPost {
   category?: string;
 }
 
-export interface PricingPlan {
-  id: string;
-  name: string;
-  subtitle: string;
-  description: string;
-  monthlyPrice: number;
-  yearlyPrice: number;
-  popular?: boolean;
-  features: string[];
-  cta: string;
-}
+
 
 export const servicesData: Service[] = [
   {
@@ -216,45 +206,7 @@ export const reviewsData: Review[] = [
   }
 ];
 
-export const pricingPlans: PricingPlan[] = [
-  {
-    id: "starter",
-    name: "Starter Plan",
-    subtitle: "Built for Growing Brands Worldwide",
-    description: "Designed for startups seeking consistent growth and online visibility online.",
-    monthlyPrice: 299,
-    yearlyPrice: 2299,
-    features: [
-      "Manage 2 Social Platforms",
-      "Monthly Performance Reports",
-      "Basic SEO Optimization",
-      "Email Support",
-      "Content Planning",
-      "Basic Branding Kit",
-      "Audience Growth Strategy"
-    ],
-    cta: "Choose Plan"
-  },
-  {
-    id: "advanced",
-    name: "Advanced Plan",
-    subtitle: "Built for Growing Companies",
-    description: "Built for growing companies seeking stronger brands and sustainable growth.",
-    monthlyPrice: 599,
-    yearlyPrice: 5599,
-    popular: true,
-    features: [
-      "Manage unlimited social platforms",
-      "Daily analytics & strategy insights",
-      "Dedicated account manager",
-      "Full branding & design suite",
-      "Multiple campaign designs monthly",
-      "Monthly campaign design updates",
-      "Website & UI/UX support"
-    ],
-    cta: "Choose Plan"
-  }
-];
+
 
 export const blogPostsData: BlogPost[] = [
   {

@@ -6,12 +6,68 @@ import Link from "next/link";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
 import SectionHeading from "../ui/SectionHeading";
-import { projectsData } from "@/lib/data";
 import { ArrowUpRight } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
+
+const portfolioSolutions = [
+  {
+    id: "1",
+    title: "Business Website",
+    summary:
+      "A modern, responsive and SEO-friendly website designed to represent your brand, improve the user experience and convert more visitors into enquiries.",
+    timeline: "Strategy, design & development",
+    satisfaction: "New and growing businesses",
+    author: {
+      name: "Web Development",
+      role: "Responsive, mobile-first experiences",
+      avatar:
+        "https://cdn.prod.website-files.com/69e362f3ced6e65f05bdec7d/6a54cbe744e8daf778bfadd5_Service_08.avif",
+    },
+    banner:
+      "https://cdn.prod.website-files.com/69e362f3ced6e65f05bdec7d/6a54c0ce0da076af38bfb544_Project_Banner_01.avif",
+    logo:
+      "https://cdn.prod.website-files.com/69dcb5467199b638883f4588/69e476836b7ea62935c4bc92_Service-Icon.svg",
+  },
+  {
+    id: "2",
+    title: "SEO & Content Growth",
+    summary:
+      "Technical SEO, on-page optimization, useful content and link building designed to improve search visibility and attract relevant organic traffic.",
+    timeline: "Search strategy & content",
+    satisfaction: "Long-term organic growth",
+    author: {
+      name: "Search Growth",
+      role: "SEO and content strategy",
+      avatar:
+        "https://cdn.prod.website-files.com/69e362f3ced6e65f05bdec7d/6a54cbd0b2d9486b37488a64_Service_07.avif",
+    },
+    banner:
+      "https://cdn.prod.website-files.com/69e362f3ced6e65f05bdec7d/6a54c0e3e6d9004d4dc464ac_Project_Banner_02.avif",
+    logo:
+      "https://cdn.prod.website-files.com/69dcb5467199b638883f4588/69e476836b7ea62935c4bc92_Service-Icon.svg",
+  },
+  {
+    id: "3",
+    title: "Lead Generation Campaign",
+    summary:
+      "Landing pages, paid campaigns and conversion-focused lead forms designed to turn targeted traffic into qualified business enquiries.",
+    timeline: "Paid media & conversion",
+    satisfaction: "Qualified leads and enquiries",
+    author: {
+      name: "Lead Generation",
+      role: "Campaigns and conversion optimization",
+      avatar:
+        "https://cdn.prod.website-files.com/69e362f3ced6e65f05bdec7d/6a5484ba4c8fb6e8690b1872_Service_06.avif",
+    },
+    banner:
+      "https://cdn.prod.website-files.com/69e362f3ced6e65f05bdec7d/6a54c0f53b2a0e4eb47dda6b_Project_Banner_03.avif",
+    logo:
+      "https://cdn.prod.website-files.com/69dcb5467199b638883f4588/69e476836b7ea62935c4bc92_Service-Icon.svg",
+  },
+];
 
 export default function FeaturedWork() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -77,18 +133,18 @@ export default function FeaturedWork() {
           className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16"
         >
           <SectionHeading
-            title="Featured Work"
-            subtitle="Showcase"
+            title="Portfolio"
+            subtitle="Solutions We Build"
             theme="white"
           />
-          <Button href="/projects" variant="white">
-            Explore Project
+          <Button href="/contact-us" variant="white">
+            Discuss Your Project
           </Button>
         </div>
 
         {/* 3 Project Cards Stack */}
         <div className="space-y-12">
-          {projectsData.map((project) => (
+          {portfolioSolutions.map((project) => (
             <div
               key={project.id}
               data-fw="card"
@@ -122,7 +178,7 @@ export default function FeaturedWork() {
                       />
                     </div>
 
-                    <Link href={`/project/${project.slug}`}>
+                    <Link href={"/contact-us"}>
                       <h3 className="text-2xl sm:text-3xl font-bold uppercase tracking-tight text-white group-hover:text-[#f97316] transition-colors mb-3">
                         {project.title}
                       </h3>
@@ -137,7 +193,7 @@ export default function FeaturedWork() {
                   <div className="grid grid-cols-2 gap-4 py-4 border-y border-dashed border-white/15">
                     <div>
                       <span className="text-[11px] font-semibold uppercase tracking-wider text-white/50 block">
-                        Project Timeline
+                        Service Focus
                       </span>
                       <span className="text-sm font-bold text-white mt-0.5 block">
                         {project.timeline}
@@ -145,7 +201,7 @@ export default function FeaturedWork() {
                     </div>
                     <div>
                       <span className="text-[11px] font-semibold uppercase tracking-wider text-white/50 block">
-                        Success Rate
+                        Best For
                       </span>
                       <span className="text-sm font-bold text-[#f97316] mt-0.5 block">
                         {project.satisfaction}
@@ -159,7 +215,7 @@ export default function FeaturedWork() {
                       <div className="w-10 h-10 rounded-full overflow-hidden relative border border-white/20">
                         <Image
                           src={project.author.avatar}
-                          alt={project.author.name}
+                          alt=""
                           fill
                           className="object-cover"
                         />
@@ -175,7 +231,7 @@ export default function FeaturedWork() {
                     </div>
 
                     <Link
-                      href={`/project/${project.slug}`}
+                      href={"/contact-us"}
                       aria-label={`View ${project.title}`}
                       className="icon-swap-group w-10 h-10 rounded-lg bg-white/10 group-hover:bg-[#f97316] text-white group-hover:text-black flex items-center justify-center transition-all duration-300"
                     >

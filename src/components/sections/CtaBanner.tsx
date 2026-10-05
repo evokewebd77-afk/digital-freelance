@@ -78,7 +78,7 @@ export default function CtaBanner() {
           <div ref={bgRef} className="absolute inset-0">
             <Image
               src="https://cdn.prod.website-files.com/69dcb5467199b638883f4588/69e9ad6b045ff7fa3bedf9e8_f1ffb9438b76424b1c8db4e39fe5c170_Cta_Banner.avif"
-              alt="Let's Build Together"
+              alt="Let's Build Something That Grows Your Business"
               fill
               className="object-cover"
             />
@@ -94,17 +94,19 @@ export default function CtaBanner() {
           >
             <div className="max-w-xl">
               <h2 className="text-3xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight text-white leading-tight">
-                Let&apos;s Build Together
+                Let&apos;s Build Something That Grows Your Business
               </h2>
               <p className="text-sm sm:text-base text-white/80 mt-4 leading-relaxed max-w-md">
-                Partner with our digital experts to create measurable marketing
-                impact and scale your brand to the next level.
+                Have a website project, SEO requirement, Google Ads campaign or
+                lead-generation goal? Tell us about your business and what you&apos;re
+                trying to achieve. We&apos;ll help you identify the right digital strategy
+                and next steps.
               </p>
             </div>
 
             <div>
               <Button href="/contact-us" variant="white">
-                Contact Us
+                Get a Free Consultation
               </Button>
             </div>
           </div>

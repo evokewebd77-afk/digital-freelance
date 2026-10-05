@@ -30,24 +30,12 @@ const navCol1 = [
   { label: "Services", href: "/services" },
   { label: "Portfolio", href: "/projects" },
   { label: "Contact", href: "/contact-us" },
-  { label: "Pricing", href: "/prices" },
 ];
 
 const navCol2 = [
   { label: "Team", href: "/about#team" },
   { label: "Team details", href: "/about#team" },
-  { label: "Blog", href: "/blogs" },
-  { label: "Blog details", href: "/blogs" },
-  { label: "Service details", href: "/services" },
-  { label: "Portfolio details", href: "/projects" },
-];
-
-const navCol3 = [
   { label: "Style Guide", href: "/about" },
-  { label: "Instructions", href: "/about" },
-  { label: "Licenses", href: "/about" },
-  { label: "Changelog", href: "/about" },
-  { label: "404 Not Found", href: "/404" },
 ];
 
 export default function Footer() {
@@ -194,23 +182,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Column 3 */}
-            <div>
-              <ul className="space-y-3 p-0 m-0 list-none">
-                {navCol3.map((item) => (
-                  <li key={item.label}>
-                    <Link
-                      href={item.href}
-                      className="nav-link-animated text-base text-white hover:text-[#f97316] transition-colors font-medium"
-                    >
-                      {item.label}
-                      <span className="nav-link-border" />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
             </div>
-          </div>
         </div>
 
         {/* Middle: Social Links & Copyright */}
@@ -242,7 +214,7 @@ export default function Footer() {
           </div>
 
           <p className="text-xs text-[#c5c5c5] m-0">
-            © Copyright 2026 | Design & Developed By Flowbrik | Powered By Next.js
+            © Copyright 2026 | Digital Freelance Studio
           </p>
         </div>
 

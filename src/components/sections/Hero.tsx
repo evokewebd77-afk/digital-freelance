@@ -4,18 +4,11 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
-import { Star, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { gsap } from "gsap";
 
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
-
-  const trustedAvatars = [
-    "https://cdn.prod.website-files.com/69dcb5467199b638883f4588/69df8b3fd1541aadb6e49271_Trusted-01.avif",
-    "https://cdn.prod.website-files.com/69dcb5467199b638883f4588/69df8b3f55cc8bdf1977a97b_Trusted-02.avif",
-    "https://cdn.prod.website-files.com/69dcb5467199b638883f4588/69df8b3f26ef012247434c8b_Trusted-03.avif",
-    "https://cdn.prod.website-files.com/69dcb5467199b638883f4588/69df8b3faf5c49f620101d1b_Trusted-04.avif",
-  ];
 
   const socialLinks = [
     {
@@ -33,11 +26,11 @@ export default function Hero() {
   ];
 
   const categories = [
-    "SEO Optimization",
-    "Content Marketing",
-    "Brand Strategy",
     "Web Development",
-    "Lead Generation",
+    "SEO",
+    "Google Ads & PPC",
+    "Social Media Marketing",
+    "Content Writing",
   ];
 
   useEffect(() => {
@@ -128,33 +121,21 @@ export default function Hero() {
         <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-4 sm:mb-6">
           {/* Trusted by Clients */}
           <div data-hero="trusted" className="flex items-center gap-3 sm:gap-5">
-            <div className="flex -space-x-2.5 sm:-space-x-3">
-              {trustedAvatars.map((url, index) => (
-                <div
-                  key={index}
-                  className="w-9 h-9 sm:w-11 sm:h-11 rounded-full border-2 border-white overflow-hidden bg-gray-200"
-                >
-                  <Image
-                    src={url}
-                    alt={`Client ${index + 1}`}
-                    width={44}
-                    height={44}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              ))}
+            <div className="w-11 h-11 rounded-full border-2 border-white overflow-hidden bg-[#f97316]/10 flex items-center justify-center flex-shrink-0">
+              <Image
+                src="https://cdn.prod.website-files.com/69dcb5467199b638883f4588/69e0a9ba22f1707c85f0bf1f_Simplification.svg"
+                alt=""
+                width={24}
+                height={24}
+                className="w-6 h-6 object-contain"
+              />
             </div>
             <div className="flex flex-col">
-              <div className="flex items-center gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-3.5 h-3.5 fill-[#f97316] text-[#f97316]"
-                  />
-                ))}
-              </div>
+              <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-black">
+                Your Digital Growth Partner
+              </span>
               <span className="text-xs sm:text-sm font-medium text-[#575757] mt-0.5">
-                Delivered 200+ projects
+                Strategy, technology and marketing in one team
               </span>
             </div>
           </div>
@@ -285,7 +266,7 @@ export default function Hero() {
               Explore Services
             </Button>
             <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-black leading-relaxed m-0">
-              Turn data into results. We combine insights to grow your brand.
+              Strategy → Build → Launch → Optimize → Grow.
             </p>
           </div>
 

@@ -15,8 +15,7 @@ const mainNavItems = [
   { num: "01", label: "Home", href: "/" },
   { num: "02", label: "About Us", href: "/about" },
   { num: "03", label: "Services", href: "/services" },
-  { num: "04", label: "Pricing", href: "/prices" },
-  { num: "05", label: "Contact", href: "/contact-us" },
+  { num: "04", label: "Contact", href: "/contact-us" },
 ];
 
 const morePages = [

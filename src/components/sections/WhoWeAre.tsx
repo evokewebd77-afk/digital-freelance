@@ -18,20 +18,20 @@ export default function WhoWeAre() {
     {
       num: "01",
       icon: Code2,
-      title: "Full-Stack Web Engineering",
-      desc: "Blazing-fast, responsive web apps and bespoke landing pages built on modern Next.js & React frameworks.",
+      title: "Strategy",
+      desc: "Define your goals, audience, positioning and the right digital channels for sustainable growth.",
     },
     {
       num: "02",
       icon: TrendingUp,
-      title: "Strategic Growth & Lead Gen",
-      desc: "Performance marketing, conversion-rate optimization, and targeted campaigns that yield real business revenue.",
+      title: "Build & Launch",
+      desc: "Create the website, content, creative and campaigns your business needs, then put them live.",
     },
     {
       num: "03",
       icon: Layers,
-      title: "Creative Direction & Branding",
-      desc: "Distinctive digital identities, seamless UX/UI, and compelling storytelling tailored for ambitious brands.",
+      title: "Optimize & Grow",
+      desc: "Track performance, improve what matters and scale the work that drives measurable growth.",
     },
   ];
 
@@ -102,11 +102,11 @@ export default function WhoWeAre() {
 
       <Container>
         {/* Top Split: Left Visual & Right Narrative */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-16 sm:mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center mb-8 sm:mb-10">
           {/* Left Column: Title & Showcase Banner */}
           <div className="lg:col-span-5 flex flex-col space-y-6">
             <div data-wwa="heading">
-              <SectionHeading title="Who We Are" theme="white" />
+              <SectionHeading title="Your Digital Growth Partner" theme="white" />
             </div>
 
             <div
@@ -114,8 +114,8 @@ export default function WhoWeAre() {
               className="relative w-full rounded-3xl overflow-hidden bg-white/5 border border-white/10 aspect-[4/3] shadow-2xl group"
             >
               <Image
-                src="https://cdn.prod.website-files.com/69dcb5467199b638883f4588/69e323747fd94b5db66abbb9_5bcf8b6523168162b7893d8148c3e581_Clock.avif"
-                alt="Digital Studio Clock"
+                src="/about.png"
+                alt="Digital Growth Partnership"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
@@ -126,11 +126,11 @@ export default function WhoWeAre() {
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#f97316] animate-pulse"></span>
                   <span className="text-xs font-semibold uppercase tracking-wider text-white">
-                    Digital Freelance Studio
+                    Freelance Digital Team
                   </span>
                 </div>
                 <span className="text-[11px] font-medium text-white/60">
-                  Global Delivery
+                  Strategy to Growth
                 </span>
               </div>
             </div>
@@ -141,28 +141,30 @@ export default function WhoWeAre() {
             <div data-wwa="content" className="space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold uppercase tracking-widest text-[#f97316]">
                 <Sparkles className="w-3.5 h-3.5 text-[#f97316]" />
-                <span>Crafting Digital Excellence</span>
+                <span>Strategy → Build → Launch → Optimize → Grow</span>
               </div>
 
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight text-white leading-tight">
-                _Empowering ambitious brands with cutting-edge design, code & growth.
+                We are a freelance digital marketing and web development team
+                helping businesses turn their online presence into a growth channel.
               </h3>
 
               <p className="text-base sm:text-lg text-[#c5c5c5] leading-relaxed max-w-2xl">
-                We operate as an agile digital freelance studio, blending bespoke web
-                development, strategic lead generation, and high-impact creative
-                direction to turn your vision into market-defining digital results.
+                From building high-performance websites to driving traffic through
+                SEO and Google Ads, creating engaging social media content and
+                generating qualified leads, we bring design, technology and marketing
+                together under one roof.
               </p>
 
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <Button href="/about" variant="white">
-                  Learn More
+                  Meet the Team
                 </Button>
                 <a
                   href="/services"
                   className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-[#f97316] transition-colors py-2 px-3"
                 >
-                  <span>Our Capabilities</span>
+                  <span>Explore Our Services</span>
                   <ArrowUpRight className="w-4 h-4" />
                 </a>
               </div>
