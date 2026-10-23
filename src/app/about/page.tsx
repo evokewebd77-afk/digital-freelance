@@ -42,7 +42,7 @@ export default function AboutPage() {
 
   const teamMembers = [
     {
-      name: "Vanshita",
+     name: "",
       role: "Full Stack Developer",
       image: "/web%20dev.avif",
       icon: Code2,
@@ -51,7 +51,7 @@ export default function AboutPage() {
       skills: ["React", "Next.js", "Node.js", "Astro"],
     },
     {
-      name: "Deepinder",
+     name: "",
       role: "Meta Ads Lead — Handling",
       image: portrait("photo-1500648767791-00dcc994a43e"),
       icon: Megaphone,
